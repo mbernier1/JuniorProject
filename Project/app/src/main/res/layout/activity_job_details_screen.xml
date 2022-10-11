@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/jobDetails"
+    android:orientation="vertical"
+    android:layout_margin="2pt" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/jobDetails_jobTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="title"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_weight=".75"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight=".1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_weight=".33"
+                    android:text="Posted By:"/>
+                <TextView
+                    android:id="@+id/jobDetails_jobUsername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:hint="username"
+                    android:layout_weight=".33"
+                    />
+                <Button
+                    android:id="@+id/ViewProfileButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_account_box"
+                    android:layout_weight=".33"
+                    android:text="Profile"
+                    >
+                </Button>
+            </LinearLayout>
+
+        <View style="@style/HorizontalDivider"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="reward"
+                android:text="Completion Reward:"
+                android:textStyle="bold"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/jobDetails_jobReward"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="reward"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Job Description:"
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:id="@+id/jobDetails_jobDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="description"
+            android:layout_weight=".5"
+            />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight=".5">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Date of Job: "
+                />
+            <TextView
+                android:id="@+id/jobDetails_jobDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Date of Job"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".05">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="reward"
+                android:text="Categories:"
+                android:textStyle="bold"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/jobDetails_jobCategories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="reward"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="reward"
+                android:text="Tags:"
+                android:textStyle="bold"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/jobDetails_jobTags"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="reward"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+
+        <View style="@style/HorizontalDivider"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/workersLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight=".1"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Current Workers:"
+                android:textStyle="bold"/>
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/workerListView"/>
+        </LinearLayout>
+
+        <View style="@style/HorizontalDivider"/>
+
+
+
+
+        <Button
+            android:id="@+id/AcceptJobButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/acceptJob"
+            android:enabled="false"
+            />
+        <Button
+            android:id="@+id/DeleteJobButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/deleteJob"
+            android:enabled="false"
+            android:visibility="gone"
+            />
+        <Button
+            android:id="@+id/ToggleJobButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/looking_for_workers"
+            android:enabled="false"
+            android:visibility="gone"
+            />
+        <Button
+            android:id="@+id/SubmitButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/submit"
+            android:enabled="false"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/Nav_map"
+        android:icon="@drawable/ic_map"
+        android:title="@string/navigationMap" />
+
+    <item
+        android:id="@+id/Nav_search"
+        android:icon="@drawable/ic_search"
+        android:title="@string/navigationSearch"/>
+
+    <item
+        android:id="@+id/space"
+        android:title=""/>
+
+    <item
+        android:id="@+id/Nav_jobs"
+        android:icon="@drawable/ic_check_box"
+        android:title="@string/navigationJobs"/>
+
+    <item
+        android:id="@+id/Nav_profile"
+        android:icon="@drawable/ic_account_box"
+        android:title="@string/navigationProfile"/>
+</menu>

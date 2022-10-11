@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfileScreen"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/EditProfileTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Profile"
+        android:textSize="30sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <EditText
+        android:id="@+id/FirstNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="First Name"
+        android:inputType="textPersonName"
+        android:layout_weight="1"
+        android:nextFocusForward="@+id/LastNameEditText"
+        android:imeOptions="actionNext"/>
+
+    <EditText
+        android:id="@+id/LastNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Last Name"
+        android:inputType="textPersonName"
+        android:layout_weight="1"
+        android:nextFocusForward="@+id/BioEditText"
+        android:imeOptions="actionNext"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/BioEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Bio"
+        android:inputType="textPersonName"
+        android:nextFocusForward="@+id/PasswordEditText"
+        android:imeOptions="actionNext"/>
+
+    <TextView
+        android:id="@+id/ErrorTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Password Below to Ensure this is You"
+        android:textSize="24sp"
+        android:layout_weight="1"
+        android:gravity="center"/>
+
+
+    <EditText
+        android:id="@+id/PasswordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:visibility="visible"/>
+
+    <Button
+        android:id="@+id/SubmitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_margin="20dp"
+        />
+
+</LinearLayout>

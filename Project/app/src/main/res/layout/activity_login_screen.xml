@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="2pt"
+    android:layout_weight="1">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ready_to_help_a_neighbor_near_you"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#FF5722"
+        android:textColorHighlight="#F3F3F6"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:layout_weight="4"
+        />
+
+    <TextView
+        android:id="@+id/LoginError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/invalid_username_password"
+        android:textColor="#FF0000"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        android:gravity="center"
+        android:layout_weight="2"
+        />
+
+    <EditText
+        android:id="@+id/userSignInName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textColor="#F3F3F6"
+        android:textColorHighlight="#F3F3F6"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:layout_gravity="center"
+        android:layout_weight=".5"
+        />
+
+    <EditText
+        android:id="@+id/userPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textColor="#F3F3F6"
+        android:textColorHighlight="#F3F3F6"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:layout_gravity="center"
+        android:layout_weight=".5"
+        />
+
+    <Button
+        android:id="@+id/logInButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/log_in"
+        android:layout_gravity="center"
+        android:layout_weight=".25"
+        />
+
+</LinearLayout>

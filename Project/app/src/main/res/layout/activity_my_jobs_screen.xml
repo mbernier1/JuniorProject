@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyJobsScreen">
+
+  <com.google.android.material.bottomappbar.BottomAppBar
+      android:id="@+id/jobTypeAppBar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="top"
+      android:layout_marginTop="0dp"
+      android:background="@android:color/background_dark"
+      app:fabCradleMargin="10dp"
+      app:fabCradleVerticalOffset="0dp"
+      app:fabCradleRoundedCornerRadius="30dp">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/jobTypeNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:menu="@menu/job_nav_menu" />
+
+  </com.google.android.material.bottomappbar.BottomAppBar>
+
+  <com.google.android.material.bottomappbar.BottomAppBar
+      android:id="@+id/topAppBar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="top"
+      android:layout_marginTop="55dp"
+      android:background="@android:color/background_dark"
+      app:fabCradleMargin="10dp"
+      app:fabCradleVerticalOffset="0dp"
+      app:fabCradleRoundedCornerRadius="30dp">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/topNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:menu="@menu/top_nav_menu" />
+
+  </com.google.android.material.bottomappbar.BottomAppBar>
+
+
+
+
+  <com.google.android.material.bottomappbar.BottomAppBar
+      android:id="@+id/bottomAppBar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="bottom"
+      android:background="@android:color/background_dark"
+      app:fabCradleMargin="10dp"
+      app:fabCradleVerticalOffset="0dp"
+      app:fabCradleRoundedCornerRadius="30dp">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/BottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:menu="@menu/bottom_nav_menu" />
+
+  </com.google.android.material.bottomappbar.BottomAppBar>
+
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+      android:id="@+id/fab"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@android:color/transparent"
+      android:src="@drawable/ic_add"
+      app:layout_anchor="@id/bottomAppBar"/>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="48dp"
+      android:orientation="horizontal">
+    <!--<Button
+        android:id="@+id/postedJobsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:enabled="false"
+        android:text="Your Posts" />
+    <Button
+        android:id="@+id/acceptedJobsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Accepted Jobs" />-->
+
+  </LinearLayout>
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/linearLayout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginBottom="60dp"
+      android:layout_marginTop="115dp"
+      android:orientation="vertical">
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/my_jobs_nav" />
+
+    <!--<ListView
+        android:id="@+id/allJobs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ListView>-->
+
+  </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

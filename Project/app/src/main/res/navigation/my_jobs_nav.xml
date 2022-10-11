@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_jobs_nav"
+    app:startDestination="@id/listed">
+
+    <fragment
+        android:id="@+id/listed"
+        android:name="com.example.testproject.Listed"
+        android:label="Listed Jobs"
+        tools:layout="@layout/fragment_listed" />
+    <fragment
+        android:id="@+id/inProgress"
+        android:name="com.example.testproject.InProgress"
+        android:label="Jobs in Progress"
+        tools:layout="@layout/fragment_in_progress" />
+    <fragment
+        android:id="@+id/completed"
+        android:name="com.example.testproject.completed"
+        android:label="Completed Jobs"
+        tools:layout="@layout/fragment_completed" />
+</navigation>
